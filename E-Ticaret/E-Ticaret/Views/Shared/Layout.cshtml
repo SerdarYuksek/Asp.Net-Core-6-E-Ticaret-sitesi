@@ -1,0 +1,125 @@
+﻿@using Microsoft.AspNetCore.Identity
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | HeleBiAlDaGit</title>
+    <link href="~/eshop/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/eshop/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/eshop/css/prettyPhoto.css" rel="stylesheet">
+    <link href="~/eshop/css/price-range.css" rel="stylesheet">
+    <link href="~/eshop/css/animate.css" rel="stylesheet">
+    <link href="~/eshop/css/main.css" rel="stylesheet">
+    <link href="~/eshop/css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    
+</head><!--/head-->
+
+<body>
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+                                <li><a href="#"><i class="fa fa-phone"></i> +9 212 570 57 48</a></li>
+                                <li><a href="#"><i class="fa fa-envelope"></i> HeleBiAlDaGit@domain.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 clearfix">
+                        <div class="logo pull-left">
+                            <a href="/Home/Index"><img src="~/css/image/logo.jpg"  width="200" height="80" alt=""/></a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-8 clearfix">
+                        <div class="shop-menu clearfix pull-right">
+                            <ul class="nav navbar-nav">
+                                
+                              @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li><a href="/User/Update"><i class="fa fa-user"></i>   @User.Identity?.Name </a></li>
+                                    <li><a href="/Account/LogOut"><i class="fa fa-lock"></i> Çıkış Yap</a></li>
+                                }
+                                else
+                                {
+                                    <li><a href="/Account/Login"><i class="fa fa-lock"></i> Giriş Yap</a></li>
+                                }
+
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li><a href="/Admin/Index"><i class="fa fa-lock"></i> Admin Paneli</a></li>      
+                                }
+                   
+                                <li><a href="/Home/Index"> Anasayfa</a></li>
+
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                     <li><a href="/Cart/Index"><img src="~/css/image/Sepet.png" width="30" height="30" /><label style="color:red">  @await Component.InvokeAsync("TotalCount") </label>Sepetim</a></li>
+                                     <li><a href="/Sales/Index"><i class="fa fa-dollar"></i> Siparişlerim</a></li>
+                                }
+
+                             
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!--/header-middle-->
+
+
+    </header><!--/header-->
+
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    <footer id="footer">
+        <!--Footer-->
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2023. Tüm Hakları Sakldır.</p>
+                    <p class="pull-right">Designed by <span style="color:#f14a0b">Serdar Yüksek</span></p>
+                </div>
+            </div>
+        </div>
+
+    </footer><!--/Footer-->
+    <script src="~/eshop/js/jquery.js"></script>
+    <script src="~/eshop/js/bootstrap.min.js"></script>
+    <script src="~/eshop/js/jquery.scrollUp.min.js"></script>
+    <script src="~/eshop/js/price-range.js"></script>
+    <script src="~/eshop/js/jquery.prettyPhoto.js"></script>
+    <script src="~/eshop/js/main.js"></script>
+</body>
+</html>

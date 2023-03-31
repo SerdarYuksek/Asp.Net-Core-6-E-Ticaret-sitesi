@@ -1,0 +1,17 @@
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.deps.json
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.runtimeconfig.json
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.dll
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\bin\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\bin\Debug\net6.0\EntityLayer.dll
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\bin\Debug\net6.0\EntityLayer.pdb
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.AssemblyInfo.cs
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.csproj.CopyComplete
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.dll
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\refint\DataAccessLayer.dll
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.pdb
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\DataAccessLayer.genruntimeconfig.cache
+C:\Users\yukse.DESKTOP-46EUPBS\source\repos\E-Ticaret\DataAccessLayer\obj\Debug\net6.0\ref\DataAccessLayer.dll

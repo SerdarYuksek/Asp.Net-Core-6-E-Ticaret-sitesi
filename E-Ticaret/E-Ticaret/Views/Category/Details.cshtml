@@ -1,0 +1,123 @@
+﻿
+@model List<EntityLayer.Entities.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+
+<section id="slider">
+    <!--slider-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider-carousel" data-slide-to="1"></li>
+                        <li data-target="#slider-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-sm-6">
+                                <h1>HBAG</h1>
+                                <h2>Lenovo Bilgisayar</h2>
+                                <p>
+                                    Oyun alanını adil hale getirin AMD Ryzen 5000 H-Series Mobil İşlemciler ve en yeni NVIDIA GeForce RTX grafik işlemcilerle elit oyuncular arasında en üstteki yerinizi alın.
+                                    Çok amaçlı bir bilgisayar olarak maksimum değer sağlayan IdeaPad Gaming 3, 165Hz FHD IPS ekranı ve 100% N-key rollover özellikli ultra hızlı klavyesi, ısıyı %40 daha fazla
+                                    dağıtan termalleri ve Nahimic üç boyutlu ses sistemiyle, profesyoneller kadar hızlı oyun oynamanızı sağlıyor.
+                                </p>
+                                <button type="button" class="btn btn-default get">Hemen Al</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="~/image/lenova.jpg" class="girl img-responsive" z-index=1 alt="" />
+                                <img src="~/css/image/pc.png" width="140" style="margin-left:120" class="ucret" alt="" />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <h1>HBAG</h1>
+                                <h2>İphone 14 Pro Max</h2>
+                                <p>
+                                    Sihirli bir İphone deneyimi. Hayat kurtarmak için tasarlanan bir güvenlik özelliği. İnovatif 48 MP Ana kamera ve gün ışığında 2 kata kadar daha parlak bir ekran.
+                                    Hepsi gücünü olağanüstü bir akıllı telefon çipinden alıyor.
+                                </p>
+                                <button type="button" class="btn btn-default get">Hemen Al</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="~/image/iphone.jfif" class="girl img-responsive" alt="" />
+                                <img src="~/css/image/iphone.png" width="140" style="margin-left:120" class="ucret" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="col-sm-6">
+                                <h1>HBAG</h1>
+                                <h2>JBL Hoparlör</h2>
+                                <p>
+                                    JBL Charge Essential Taşınabilir Bluetooth Hoparlör ile maceralarınızın daha uzun sürmesini sağlayın. Bu taşınabilir bluetooth hoparlör, güçlü Orijinal JBL Pro Ses ve dayanıklı bir batarya ile birlikte gelir.
+                                    Kullanışlı powerbank özelliği ile USB portu aracılığıyla cihazlarınızı hızlı bir şekilde şarj etmenizi sağlar.
+                                    Sesi zengin, derin basla yoğunlaştıran ikili pasif sürücüler sayesinde melodileriniz herkesi dans pistine çıkaracak.
+                                    20 saate kadar oynatma süresi ve IPX7 su geçirmez tasarımıyla, hayat sizi nereye götürürse götürsün partiyi devam ettirin.
+                                </p>
+                                <button type="button" class="btn btn-default get">Hemen Al</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="~/image/hoparlör.jpg" class="girl img-responsive" alt="" />
+                                <img src="~/css/image/jbl.png" width="140" style="margin-left:120" class="ucret" alt="" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section><!--/slider-->
+
+<section>
+    <div class="container">
+        <div class="row">
+            @await Component.InvokeAsync("CategoryList")
+
+            <div class="col-sm-9 padding-right">
+                <div class="features_items">
+                    <!--features_items-->
+                    <h2 class="title text-center">ÜRÜNLERİMİZ</h2>
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-sm-4">
+                            <div class="product-image-wrapper">
+                                <div class="single-products">
+                                    <div class="productinfo text-center">
+
+                                        <a href="/Product/ProductDetails/@item.Id"><img src="~/image/@item.Image" width="65" height="110" alt="" /></a>
+                                        <h2>@item.Price</h2>
+                                        <p>@item.Name</p>
+                                        <a href="/Product/ProductDetails/@item.Id" class="btn btn-default add-to-cart">Ürün Detay</a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    }
+
+                </div><!--features_items-->
+                @await Component.InvokeAsync("PopularProduct")
+
+            </div>
+        </div>
+    </div>
+</section>
+
